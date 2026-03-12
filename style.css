@@ -6,32 +6,64 @@ margin:0;
 text-align:center;
 }
 
-header{
-padding:80px 20px;
+.hero{
+padding:120px 20px;
 }
 
 h1{
-font-size:50px;
+font-size:60px;
 margin:0;
 }
 
+.subtitle{
+color:#94a3b8;
+margin-top:10px;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+background:#6366f1;
+padding:12px 25px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+margin:5px;
+display:inline-block;
+}
+
+.btn.outline{
+background:transparent;
+border:1px solid #6366f1;
+}
+
 .about{
-margin-top:40px;
+max-width:700px;
+margin:auto;
+padding:60px 20px;
 }
 
 .projects{
-margin-top:60px;
+padding:60px 20px;
+}
+
+.project-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
 }
 
 .card{
 background:#1e293b;
+padding:25px;
 width:250px;
-margin:20px auto;
-padding:20px;
-border-radius:10px;
+border-radius:12px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:translateY(-5px);
 }
