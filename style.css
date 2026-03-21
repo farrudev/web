@@ -1,35 +1,118 @@
-/* --- Reseteo --- */
+/* --- Reseteo y Estilos Base --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 body {
     background-color: var(--bg-page);
-    background-image: radial-gradient(circle at top left, rgba(255, 42, 42, 0.05) 0%, transparent 50%);
+    background-image: radial-gradient(circle at top left, rgba(255, 42, 42, 0.05) 0%, transparent 40%);
     color: var(--text-primary);
+    overflow-x: hidden;
+    padding-top: 100px; /* Margen para el header fixed */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .container {
-    width: 90%;
+    width: 92%;
     max-width: 1200px;
 }
 
-/* --- Header y Navegación --- */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+h3, h4, h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+/* --- Componentes Reutilizables con Efecto Cristal/Neumórfico --- */
+
+/* Tarjetas Principales (Grandes) */
+.neumorphic-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-large);
+    padding: 30px;
+    box-shadow: var(--shadow-card-outer);
+    border: var(--border-glass);
+}
+
+/* Elementos Neumórficos Hundidos */
+.card-neumorphic-btn, .terminal-container {
+    background-color: var(--bg-element);
+    border-radius: var(--radius-med);
+    padding: 20px;
+    box-shadow: var(--shadow-neumorphic-in);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.card-neumorphic-btn:hover {
+    box-shadow: var(--shadow-neumorphic-out);
+    background-color: var(--bg-card);
+}
+
+/* Botones Principales (Rojos Vibrantísimos con Resplandor) */
+.btn-main, .btn-card {
+    background-color: var(--red-vibrant);
+    color: var(--text-primary) !important;
+    padding: 10px 25px;
+    border-radius: var(--radius-round);
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 0 20px var(--red-glow);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-card {
+    font-size: 12px;
+    padding: 8px 18px;
+    margin-top: 15px;
+}
+
+/* Etiquetas Rojas */
+.tag-red {
+    background-color: var(--red-muted);
+    color: var(--red-vibrant);
+    border: 1px solid rgba(255, 42, 42, 0.15);
+    padding: 5px 12px;
+    border-radius: var(--radius-round);
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Texto Resaltado */
+.highlight-red {
+    color: var(--red-vibrant);
+    text-shadow: 0 0 15px var(--red-glow);
+}
+
+/* --- Header y Navegación (Estilo Cristal Oscuro) --- */
 header {
     width: 100%;
-    padding: 15px 0;
+    padding: 20px 0;
     position: fixed;
     top: 0;
     z-index: 1000;
     background: rgba(5, 5, 5, 0.85);
     backdrop-filter: blur(12px);
-    border-bottom: var(--border-glass);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .header-content {
@@ -45,139 +128,317 @@ header {
 }
 
 .avatar-small {
-    width: 35px !important;
-    height: 35px !important;
-    border-radius: 50%;
+    width: 40px; /* Tamaño forzado */
+    height: 40px; /* Tamaño forzado */
+    border-radius: var(--radius-round);
     object-fit: cover;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.05);
 }
 
-.profile-text h1 { font-size: 16px; }
-.profile-text p { font-size: 11px; color: var(--text-muted); }
+.profile-text h1 {
+    font-size: 16px;
+}
+
+.profile-text p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
 
 nav ul {
     display: flex;
-    gap: 10px;
-    background: var(--bg-element);
-    padding: 6px 15px;
+    gap: 12px;
+    background-color: var(--bg-element);
+    padding: 8px 20px;
     border-radius: var(--radius-round);
-    border: var(--border-glass);
+    border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 nav a {
     font-size: 13px;
     color: var(--text-secondary);
-    padding: 5px 12px;
-    text-decoration: none;
-    transition: var(--transition);
+    padding: 6px 12px;
 }
 
-nav a:hover, nav a.active {
-    color: var(--text-primary);
-    background: rgba(255,255,255,0.05);
+nav a.active, nav a:hover {
+    color: var(--text-primary) !important;
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-round);
 }
 
-.btn-main {
-    background: var(--red-vibrant);
-    color: white;
-    padding: 9px 20px;
-    border-radius: var(--radius-round);
-    font-weight: bold;
-    font-size: 13px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 15px var(--red-glow);
-}
-
-/* --- Panel Principal --- */
-main { padding-top: 120px; width: 100%; }
-
-.neumorphic-card {
-    background: var(--bg-card);
-    border-radius: var(--radius-large);
-    padding: 40px;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow-card-outer);
-    border: var(--border-glass);
-}
-
-.hero-text { font-size: 3rem; margin-bottom: 20px; }
-.highlight-red { color: var(--red-vibrant); text-shadow: 0 0 10px var(--red-glow); }
-
-.globe-container {
-    width: 140px;
-    height: 140px;
-    background: radial-gradient(circle, rgba(255, 42, 42, 0.15) 0%, var(--bg-element) 70%);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    box-shadow: var(--shadow-neumorphic-out);
-}
-
-/* --- Barras de Habilidades --- */
-.skills-grid {
+/* --- ESTRUCTURA DE REJILLA PRINCIPAL (Dos Columnas como la imagen) --- */
+.main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.skill-list { list-style: none; }
-.skill-list li {
-    margin-bottom: 18px;
+/* --- Sección Inicio (Fuerza Colocación Izquierda) --- */
+.intro-section {
+    grid-column: 1 / 2;
+}
+
+.hero-text {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 15px 0;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.description {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 650px;
 }
 
-.skill-bar {
-    width: 100%;
-    height: 7px;
-    background: var(--bg-page);
-    border-radius: 10px;
-    margin-top: 8px;
-    position: relative;
-    box-shadow: var(--shadow-neumorphic-in);
-    overflow: hidden;
+.role-command {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin: 15px 0;
 }
 
-.bar-fill {
-    display: block;
-    height: 100%;
-    background: var(--red-vibrant);
-    box-shadow: 0 0 10px var(--red-glow);
-    border-radius: 10px;
+.meta-tags {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
 }
 
-.bar-90 { width: 90%; }
-.bar-80 { width: 80%; }
-.bar-70 { width: 70%; }
-.bar-60 { width: 60%; }
+/* Globo MX con fondo rojo radial vibrante */
+.globe-container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(255, 42, 42, 0.25) 0%, #0c0c0c 70%);
+    color: var(--text-primary);
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 50% !important; /* Forzamos círculo */
+    box-shadow: var(--shadow-neumorphic-out);
+    margin-bottom: 20px;
+}
 
-/* --- Proyectos --- */
+/* Terminal Neumórfica */
+.terminal-container {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.terminal-container h6 {
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.terminal-container pre {
+    white-space: pre-wrap;
+}
+
+/* --- Sección Trabajos (Derecha) y Grid de Proyectos --- */
+.work-section {
+    grid-column: 2 / 3;
+}
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.card-neumorphic-btn {
-    background: var(--bg-element);
-    padding: 25px;
-    border-radius: var(--radius-med);
-    box-shadow: var(--shadow-neumorphic-in);
-    border: var(--border-glass);
+.project-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
-.btn-card {
-    background: var(--red-vibrant);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 6px;
-    margin-top: 15px;
-    cursor: pointer;
+.project-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* --- Sección Habilidades (Izquierda) --- */
+.skills-section {
+    grid-column: 1 / 2;
+}
+
+.skills-list-block {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.skill-category h5 {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    text-transform: none;
+}
+
+.skill-list li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las barras de progreso */
+.skill-bar {
+    height: 8px;
+    background-color: var(--bg-page);
+    border-radius: var(--radius-round);
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-neumorphic-in);
+}
+
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; height: 100%;
+    background-color: var(--red-vibrant);
+    border-radius: var(--radius-round);
+    box-shadow: 0 0 10px var(--red-glow);
+}
+
+/* Anchos gráficos forzados */
+.bar-90::after { width: 90%; }
+.bar-80::after { width: 80%; }
+.bar-70::after { width: 70%; }
+.bar-60::after { width: 60%; }
+
+/* --- Sección Referencias (Derecha) --- */
+.references-section {
+    grid-column: 2 / 3;
+}
+
+.reference-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ref-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.avatar-ref {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-round);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.avatar-placeholder-ref {
+    font-size: 40px;
+    color: var(--text-muted);
+}
+
+.ref-text h6 {
+    font-size: 14px;
+    text-transform: none;
+}
+
+.ref-text p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* --- Sección Sobre Mi (Inferior Full Ancho) --- */
+.about-section {
+    grid-column: 1 / span 2;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* --- Sección Trayectoria (Inferior Full Ancho) --- */
+.timeline-section {
+    grid-column: 1 / span 2;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.timeline-accent {
+    width: 4px;
+    height: 35px;
+    background-color: var(--red-vibrant);
+    box-shadow: 0 0 15px var(--red-glow);
+}
+
+.title-timeline {
+    color: var(--text-primary);
+    font-size: 2rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.timeline-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.timeline-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    margin-top: 100px; /* Margen para simular trayectoria superior */
+}
+
+.timeline-node {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--red-vibrant);
+    font-size: 2rem;
+    border-radius: var(--radius-large) !important;
+}
+
+.node-title {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.node-sub {
+    color: var(--text-muted);
+    font-size: 0.75rem;
 }
