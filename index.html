@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>FARRUKOOO | Portfolio</title>
-
+<title>FARRU | Portfolio</title>
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -16,41 +12,39 @@
 <!-- NAVBAR -->
 <nav class="navbar">
 
-<div class="nav-left">
 <div class="logo">FARRU</div>
 
-<div class="nav-links">
-<a href="#" class="nav-link">Inicio</a>
-<a href="#projects" class="nav-link" id="navProjects">Mis trabajos</a>
-<a href="#skills" class="nav-link" id="navSkills">Habilidades</a>
-<a href="#contact" class="nav-link" id="navContact">Contacto</a>
-</div>
+<div class="nav-center">
+<a href="#inicio" class="nav-item active">Inicio</a>
+<a href="#trayectoria" class="nav-item">Trayectoria</a>
+<a href="#proyectos" class="nav-item">Trabajos</a>
+<a href="#skills" class="nav-item">Habilidades</a>
+<a href="#contacto" class="nav-item">Contacto</a>
 </div>
 
-<a class="contact-top" href="#contact">Contáctame</a>
+<a href="#contacto" class="btn-nav">Contáctame</a>
 
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section id="inicio" class="section hero">
 
-<div class="hero-container">
+<div class="hero-box">
 
-<!-- LEFT -->
 <div class="hero-left">
 
 <div class="badge">🔴 Server Dev - Discord Dev</div>
 
-<h1 id="title">Hola, soy <span>FARRUKOOO</span></h1>
+<h1>Hola, soy <span>FARRU</span></h1>
 
-<p class="desc" id="desc">
-Me especializo en comunidades, configuración de plugins, bots de Discord
-y administración de servidores.
+<p>
+Me especializo en comunidades, configuración de plugins,
+bots de Discord y administración de servidores.
 </p>
 
 <div class="hero-buttons">
-<a class="btn-primary" href="#contact">Contáctame</a>
-<a class="btn-secondary" href="#projects">Ver trabajos</a>
+<a href="#contacto" class="btn-primary">Contáctame</a>
+<a href="#proyectos" class="btn-secondary">Ver trabajos</a>
 </div>
 
 <div class="tags">
@@ -60,9 +54,7 @@ y administración de servidores.
 
 </div>
 
-<!-- RIGHT -->
 <div class="hero-right">
-
 <div class="circle">MX</div>
 
 <div class="terminal">
@@ -71,89 +63,55 @@ y administración de servidores.
 <p>$ focus</p>
 <p>aesthetics, efficiency, communities</p>
 </div>
+</div>
 
 </div>
 
+</section>
+
+<!-- TRAYECTORIA -->
+<section id="trayectoria" class="section">
+
+<h2 class="section-title">TRAYECTORIA</h2>
+<p class="section-desc">
+Experiencia trabajando en servidores y comunidades.
+</p>
+
+<div class="timeline">
+<div class="timeline-item">
+<h3>Inicio</h3>
+<p>Comencé como helper y fui subiendo hasta developer.</p>
+</div>
 </div>
 
 </section>
 
 <!-- SKILLS -->
-<section class="skills" id="skills">
+<section id="skills" class="section">
 
-<h2 id="skillsTitle">Habilidades</h2>
+<h2 class="section-title">HABILIDADES</h2>
 
-<div class="skills-container">
+<div class="skills-box">
 
 <div class="skill">
-<div class="skill-title">
-<span id="skill1">YAML / Configuración</span>
-<span>80%</span>
-</div>
-<div class="bar"><div class="progress yaml"></div></div>
+<span>YAML / Configuración</span>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
 </div>
 
 <div class="skill">
-<div class="skill-title">
-<span id="skill2">Gestión de Equipos</span>
-<span>85%</span>
-</div>
-<div class="bar"><div class="progress team"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">
-<span id="skill3">Solución de Problemas</span>
-<span>80%</span>
-</div>
-<div class="bar"><div class="progress problem"></div></div>
+<span>Gestión de Equipos</span>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
 </div>
 
 </div>
 
 </section>
 
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-
-<h2 id="projectsTitle">Proyectos</h2>
-
-<div class="card">
-<div class="card-header">
-<img class="server-logo" src="https://cdn.discordapp.com/attachments/1470942666366910536/1481765483362521130/91d2104d9468480e73dc5f274637cafa.png">
-<h3>KENIBOX NETWORK</h3>
-<span class="role-btn">FOUNDER</span>
-</div>
-<p>Proyecto donde comencé y aprendí configuración avanzada.</p>
-<div class="date">📅 2023 / 2025</div>
-</div>
-
-<div class="card">
-<div class="card-header">
-<img class="server-logo" src="https://cdn.discordapp.com/icons/1469905316601921680/dad32dfc8743d1dbb9c9a329b0631491.webp">
-<h3>ALMAMC</h3>
-<span class="role-btn">DEV</span>
-</div>
-<p>Developer activo del servidor.</p>
-<div class="date">📅 2026</div>
-</div>
-
+<!-- CONTACTO -->
+<section id="contacto" class="section contact">
+<h2>Contacto</h2>
+<a href="https://discord.com" class="btn-primary">@f4rru</a>
 </section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-
-<h2 id="contactTitle">Contacto</h2>
-
-<div class="contact-box">
-<a class="discord-link" href="https://discord.com/users/724713816553816134" target="_blank">
-@f4rru
-</a>
-</div>
-
-</section>
-
-<script src="script.js"></script>
 
 </body>
 </html>
