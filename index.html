@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Farrukooo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Farrukooo | Portafolio</title>
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +12,7 @@
     <header>
         <div class="container header-content">
             <div class="profile-meta">
-                <img src="https://images-ext-1.discordapp.net/external/RTdaWienYQt_2BtCVomvnCD_gtggC1RhMCoUip-PGCY/https/cdn.discordapp.com/avatars/724713816553816134/e6625adcc0635980b9465d2b8fb7b5d0.webp?format=webp" alt="Avatar" class="avatar-small">
+                <img src="https://images-ext-1.discordapp.net/external/RTdaWienYQt_2BtCVomvnCD_gtggC1RhMCoUip-PGCY/https/cdn.discordapp.com/avatars/724713816553816134/e6625adcc0635980b9465d2b8fb7b5d0.webp" class="avatar-small" alt="Avatar">
                 <div class="profile-text">
                     <h1>Farrukooo</h1>
                     <p>Portafolio</p>
@@ -21,126 +20,54 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#inicio" class="active">Inicio</a></li>
-                    <li><a href="#trayectoria">Trayectoria</a></li>
-                    <li><a href="#trabajos">Mis trabajos</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#sobremi">Sobre mi</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#">Trayectoria</a></li>
+                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
-            <a href="#contacto" class="btn-main">Contactame</a>
+            <button class="btn-main">Contactame</button>
         </div>
     </header>
 
     <main class="container">
-        
-        <section id="inicio" class="main-panel neumorphic-card">
-            <div class="panel-intro">
-                <div class="intro-left">
-                    <span class="tag-red">● Server Dev - Discord Dev</span>
-                    <h2 class="hero-text">Hola, soy <span class="highlight-red">Farrukooo</span></h2>
-                    <p class="description">
-                        Me especializo en la configuracion de plugins YAML, Gestion de equipos como staffs o administrativos, desarrollador de discord bots, configurador de discord entre mas. Me encuentro siempre en constante aprendimiento, si deseas contactarme te dejo mi contacto abajo.
-                    </p>
-                    <p class="role-command">$ role: Server Dev</p>
-                    <div class="intro-actions">
-                        <a href="#contacto" class="btn-main">Contactame</a>
-                        <a href="#trayectoria" class="card-neumorphic-btn" style="padding: 10px 20px;">Ver trayectoria</a>
-                    </div>
-                    <div class="meta-tags">
-                        <span class="tag-red"><i class="fas fa-location-dot"></i> Chile</span>
-                        <span class="tag-red"><i class="fas fa-bolt"></i> Dev, Config</span>
-                    </div>
+        <section class="neumorphic-card" style="display: flex; gap: 40px; align-items: center;">
+            <div style="flex: 2;">
+                <span style="color: var(--red-vibrant); font-size: 12px;">● Server Dev - Discord Dev</span>
+                <h2 class="hero-text">Hola, soy <span class="highlight-red">Farrukooo</span></h2>
+                <p style="color: var(--text-secondary);">Me especializo en la configuración de plugins YAML, gestión de equipos y desarrollo de bots. Constantemente aprendiendo nuevas tecnologías.</p>
+                <div style="margin-top: 25px;">
+                    <button class="btn-main">Contactame</button>
+                    <button style="background: none; border: 1px solid var(--text-muted); color: white; padding: 9px 20px; border-radius: 50px; margin-left: 10px;">Ver trayectoria</button>
                 </div>
-                <div class="intro-right">
-                    <div class="globe-container">
-                        <div class="globe-text">MX</div>
-                    </div>
-                    <div class="terminal-container card-neumorphic-btn">
-                        <p># user_info</p>
-                        <pre>
-farrudev@portafolio
-Farrukooo - 15 Años
-Configurador MC, Administrador.</pre>
-                    </div>
-                </div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                <div class="globe-container">MX</div>
             </div>
         </section>
 
-        <section id="trabajos" class="work-section neumorphic-card">
-            <h3 class="section-title">MIS TRABAJOS</h3>
-            <p class="section-subtitle">Proyectos en los que he participado y trabajado activamente.</p>
-            <div class="project-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-                <div class="project-card card-neumorphic-btn">
-                    <i class="fas fa-cubes" style="font-size: 30px; color: var(--accent-red);"></i>
-                    <h4>KENIBOX NETWORK</h4>
-                    <p>Comencé como soporte y ascendí a <strong>DUEÑO</strong>. El servidor alcanzó un pico de 400 usuarios.</p>
-                    <a href="#" class="btn-card">Ver detalles</a>
+        <section class="neumorphic-card">
+            <h3 style="margin-bottom: 20px;">MIS HABILIDADES</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h5>Gestión de Servidores</h5>
+                    <ul class="skill-list">
+                        <li>Discord API <div class="skill-bar"><span class="bar-fill bar-90"></span></div></li>
+                        <li>MC Server Admin <div class="skill-bar"><span class="bar-fill bar-80"></span></div></li>
+                        <li>YAML Config <div class="skill-bar"><span class="bar-fill bar-90"></span></div></li>
+                    </ul>
                 </div>
-                <div class="project-card card-neumorphic-btn">
-                    <i class="fab fa-discord" style="font-size: 30px; color: var(--accent-red);"></i>
-                    <h4>Discord Community</h4>
-                    <p>Arquitectura de servidores, sistemas de seguridad y gestión de comunidades masivas.</p>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </div>
-                <div class="project-card card-neumorphic-btn">
-                    <i class="fas fa-gears" style="font-size: 30px; color: var(--accent-red);"></i>
-                    <h4>Modpacks</h4>
-                    <p>Integración técnica de mods y optimización de rendimiento para servidores técnicos.</p>
-                    <a href="#" class="btn-card">Ver detalles</a>
+                <div class="skill-category">
+                    <h5>Desarrollo</h5>
+                    <ul class="skill-list">
+                        <li>JavaScript <div class="skill-bar"><span class="bar-fill bar-70"></span></div></li>
+                        <li>Linux Admin <div class="skill-bar"><span class="bar-fill bar-60"></span></div></li>
+                        <li>Bots Development <div class="skill-bar"><span class="bar-fill bar-80"></span></div></li>
+                    </ul>
                 </div>
             </div>
         </section>
-
-        <div class="skill-ref-row" style="display: flex; gap: 25px;">
-            <section id="habilidades" class="skills-section neumorphic-card" style="flex: 2;">
-                <h3 class="section-title">HABILIDADES</h3>
-                <div class="skills-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div class="skill-category">
-                        <h5>Gestión:</h5>
-                        <ul class="skill-list">
-                            <li>Discord API <span class="skill-bar bar-90"></span></li>
-                            <li>MC Server Admin <span class="skill-bar bar-80"></span></li>
-                            <li>YAML Expert <span class="skill-bar bar-90"></span></li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h5>Desarrollo:</h5>
-                        <ul class="skill-list">
-                            <li>JavaScript <span class="skill-bar bar-70"></span></li>
-                            <li>Linux Admin <span class="skill-bar bar-60"></span></li>
-                            <li>Git <span class="skill-bar bar-70"></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="referencias" class="references-section neumorphic-card" style="flex: 1;">
-                <h3 class="section-title">REFERENCIAS</h3>
-                <div class="reference-card card-neumorphic-btn">
-                    <h6>El_Admin_Senior</h6>
-                    <p class="quote">"Trabajo impecable y muy profesional."</p>
-                </div>
-            </section>
-        </div>
-
-        <section id="trayectoria" class="timeline-section neumorphic-card">
-            <div class="timeline-header">
-                <span class="timeline-accent-bar"></span>
-                <h3 class="section-title-large">TRAYECTORIA</h3>
-            </div>
-            <div class="timeline-bar">
-                <div class="timeline-progress" style="width: 30%;"></div>
-            </div>
-            <p style="margin-top: 20px; color: var(--text-gray-500);">Línea de tiempo en desarrollo...</p>
-        </section>
-
     </main>
-
-    <footer>
-        <p>&copy; 2026 Farrukooo. Todos los derechos reservados.</p>
-    </footer>
 
 </body>
 </html>
