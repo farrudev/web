@@ -1,104 +1,33 @@
-/* --- Reseteo y Estilos Base --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background-color: var(--bg-dark-900);
-    color: var(--text-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
+    background-color: var(--bg-page);
+    background-image: radial-gradient(circle at top left, rgba(255, 42, 42, 0.05) 0%, transparent 50%);
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition-fast);
-}
-
-ul {
-    list-style: none;
-}
-
-h3, h4, h5, h6 {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* --- Componentes Reutilizables --- */
-.neumorphic-card {
-    background-color: var(--bg-dark-800);
-    border-radius: var(--border-radius-large);
-    padding: 35px;
-    margin-bottom: 30px;
-    box-shadow: var(--neumorphic-shadow);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.card-neumorphic-btn {
-    background-color: var(--bg-dark-700);
-    border-radius: var(--border-radius-med);
-    padding: 15px;
-    box-shadow: var(--neumorphic-shadow-inset);
-    transition: var(--transition-fast);
-    border: 1px solid rgba(255, 255, 255, 0.02);
-}
-
-.btn-main {
-    background-color: var(--accent-red);
-    color: var(--text-white);
-    padding: 10px 25px;
-    border-radius: var(--border-radius-round);
-    font-weight: bold;
-    font-size: 14px;
-    box-shadow: 0 0 15px var(--accent-red-glow);
-    border: none;
-    cursor: pointer;
-}
-
-.btn-card {
-    background-color: var(--accent-red);
-    color: var(--text-white);
-    padding: 8px 18px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.tag-red {
-    background-color: rgba(255, 49, 49, 0.1);
-    color: var(--accent-red);
-    border: 1px solid rgba(255, 49, 49, 0.2);
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: 11px;
-}
-
-.highlight-red {
-    color: var(--accent-red);
-    text-shadow: 0 0 10px var(--accent-red-glow);
-}
-
-/* --- Header y Navegación (ESTILO OSCURO IGUAL A LA IMAGEN) --- */
+/* --- HEADER (Avatar Arreglado) --- */
 header {
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
     position: fixed;
     top: 0;
-    z-index: 100;
     background: rgba(5, 5, 5, 0.8);
     backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: var(--border-glass);
 }
 
 .header-content {
@@ -107,94 +36,100 @@ header {
     align-items: center;
 }
 
+.profile-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-small {
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 nav ul {
     display: flex;
-    gap: 10px;
-    background: #111111;
-    padding: 6px 15px;
-    border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 15px;
+    background: var(--bg-element);
+    padding: 8px 20px;
+    border-radius: var(--radius-round);
 }
 
 nav a {
+    color: var(--text-secondary);
     font-size: 13px;
-    color: var(--text-gray-300);
-    padding: 6px 14px;
+    text-decoration: none;
 }
 
-nav a:hover, nav a.active {
-    color: var(--text-white);
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 50px;
+nav a.active, nav a:hover {
+    color: var(--text-primary);
 }
 
-/* --- Main Content --- */
-main {
-    padding-top: 120px;
-    padding-bottom: 50px;
+/* --- TARJETAS Y BOTONES --- */
+.neumorphic-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-large);
+    padding: 40px;
+    margin-top: 120px;
+    box-shadow: var(--shadow-card-outer);
+    border: var(--border-glass);
 }
 
-.main-panel .panel-intro {
+.btn-main {
+    background: var(--red-vibrant);
+    color: white;
+    padding: 10px 25px;
+    border-radius: var(--radius-round);
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--red-glow);
+    border: none;
+    cursor: pointer;
+}
+
+/* --- BARRAS DE HABILIDADES (Rojo Neón) --- */
+.skill-list li {
+    list-style: none;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
     display: flex;
-    gap: 30px;
+    flex-direction: column;
 }
 
-.hero-text {
-    font-size: 2.8rem;
-    margin: 15px 0;
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--bg-page);
+    border-radius: 10px;
+    margin-top: 8px;
+    position: relative;
+    box-shadow: var(--shadow-neumorphic-in);
+    overflow: hidden;
 }
 
-/* Globo MX con fondo rojo radial */
+.bar-fill {
+    height: 100%;
+    background: var(--red-vibrant);
+    box-shadow: 0 0 10px var(--red-glow);
+    border-radius: 10px;
+    display: block;
+}
+
+.bar-90 { width: 90%; }
+.bar-80 { width: 80%; }
+.bar-70 { width: 70%; }
+
+/* --- GLOBO MX --- */
 .globe-container {
-    height: 140px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 42, 42, 0.15) 0%, var(--bg-element) 70%);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, rgba(255, 49, 49, 0.15) 0%, #141414 70%);
     font-size: 3rem;
-    border-radius: 50% !important;
-}
-
-/* --- BARRAS DE HABILIDADES (CORREGIDAS A ROJO) --- */
-.skill-bar {
-    height: 6px;
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    flex-grow: 1;
-    position: relative;
-    overflow: hidden;
-    margin-top: 5px;
-}
-
-.skill-bar::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; height: 100%;
-    background-color: var(--accent-red); /* AHORA SON ROJAS */
-    box-shadow: 0 0 10px var(--accent-red);
-    border-radius: 10px;
-}
-
-.bar-90::after { width: 90%; }
-.bar-80::after { width: 80%; }
-.bar-70::after { width: 70%; }
-.bar-60::after { width: 60%; }
-
-/* --- Trayectoria --- */
-.timeline-accent-bar {
-    width: 4px;
-    height: 40px;
-    background-color: var(--accent-red);
-    box-shadow: 0 0 15px var(--accent-red-glow);
-}
-
-.timeline-progress {
-    height: 100%;
-    background-color: var(--accent-red);
-    box-shadow: 0 0 10px var(--accent-red);
-}
-
-.active-node .node-icon {
-    border: 2px solid var(--accent-red);
-    color: var(--accent-red);
+    font-weight: bold;
+    box-shadow: var(--shadow-neumorphic-out);
 }
