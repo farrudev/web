@@ -1,48 +1,53 @@
-const esBtn = document.getElementById("es")
-const enBtn = document.getElementById("en")
+const title = document.getElementById("title")
+const desc = document.getElementById("desc")
 
-esBtn.onclick = () => {
+const navSkills = document.getElementById("navSkills")
+const navProjects = document.getElementById("navProjects")
+const navContact = document.getElementById("navContact")
 
+const skillsTitle = document.getElementById("skillsTitle")
+const projectsTitle = document.getElementById("projectsTitle")
+const contactTitle = document.getElementById("contactTitle")
+
+const skill1 = document.getElementById("skill1")
+const skill2 = document.getElementById("skill2")
+const skill3 = document.getElementById("skill3")
+
+// simple idioma toggle
+document.addEventListener("keydown", (e) => {
+
+if(e.key === "e"){
+title.innerText = "Hi, I'm FARRUKOOO"
+desc.innerText = "Plugin configurator, Discord bot dev and server manager."
+
+navSkills.innerText = "SKILLS"
+navProjects.innerText = "PROJECTS"
+navContact.innerText = "CONTACT"
+
+skillsTitle.innerText = "SKILLS"
+projectsTitle.innerText = "PROJECTS"
+contactTitle.innerText = "CONTACT"
+
+skill1.innerText = "YAML / Config"
+skill2.innerText = "Team Management"
+skill3.innerText = "Problem Solving"
+}
+
+if(e.key === "s"){
 title.innerText = "Hola, soy FARRUKOOO"
-subtitle.innerText = "CONFIGURADOR MEDIO"
-
-desc.innerText = "Hola, soy farru, tengo 15 años y vivo en chile, me especializo en la configuracion de plugins principalmente YAML, Bots de discord y administrador de servidores."
+desc.innerText = "Configurador de plugins, bots de Discord y administrador."
 
 navSkills.innerText = "HABILIDADES"
-navProjects.innerText = "REFERENCIAS Y PROYECTOS"
-navContact.innerText = "CONTACTAME"
+navProjects.innerText = "PROYECTOS"
+navContact.innerText = "CONTACTO"
 
-skillsTitle.innerText = "MIS HABILIDADES"
-projectsTitle.innerText = "REFERENCIAS Y PROYECTOS"
-
-contactTitle.innerText = "CONTACTAME"
-contactDesc.innerText = "Contactame a través de Discord"
+skillsTitle.innerText = "HABILIDADES"
+projectsTitle.innerText = "PROYECTOS"
+contactTitle.innerText = "CONTACTO"
 
 skill1.innerText = "YAML / Configuración"
 skill2.innerText = "Gestión de Equipos"
 skill3.innerText = "Solución de Problemas"
-
 }
 
-enBtn.onclick = () => {
-
-title.innerText = "Hi, I'm FARRUKOOO"
-subtitle.innerText = "PLUGIN CONFIGURATOR"
-
-desc.innerText = "Hi, I'm Farru, I'm 15 years old and I live in Chile. I specialize in plugin configuration, YAML, Discord bots and server administration."
-
-navSkills.innerText = "SKILLS"
-navProjects.innerText = "PROJECTS & REFERENCES"
-navContact.innerText = "CONTACT ME"
-
-skillsTitle.innerText = "MY SKILLS"
-projectsTitle.innerText = "PROJECTS & REFERENCES"
-
-contactTitle.innerText = "CONTACT ME"
-contactDesc.innerText = "Contact me through Discord"
-
-skill1.innerText = "YAML / Configuration"
-skill2.innerText = "Team Management"
-skill3.innerText = "Problem Solving"
-
-}
+})
