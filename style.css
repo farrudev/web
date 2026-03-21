@@ -318,7 +318,7 @@ nav a.active, nav a:hover {
 /* Anchos gráficos forzados */
 .bar-90::after { width: 90%; }
 .bar-95::after { width: 95%; }
-.bar-70::after { width: 70%; }
+.bar-100::after { width: 100%; }
 .bar-60::after { width: 60%; }
 
 /* --- Sección Referencias (Derecha) --- */
