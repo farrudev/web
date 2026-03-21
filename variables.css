@@ -1,26 +1,25 @@
 :root {
-    /* Paleta de Colores Principal */
-    --bg-dark-900: #0a0a0a;
-    --bg-dark-800: #121212;
-    --bg-dark-700: #1a1a1a; /* Base de las tarjetas neumórficas */
+    /* Fondo más oscuro para que resalte el rojo */
+    --bg-dark-900: #050505; 
+    --bg-dark-800: #0c0c0c;
+    --bg-dark-700: #141414; 
     
     --text-white: #ffffff;
     --text-gray-300: #b0b0b0;
-    --text-gray-500: #707070;
+    --text-gray-500: #606060;
     
-    --accent-red: #ff3333;
-    --accent-red-hover: #cc0000;
+    /* Rojo Vibrante de la imagen */
+    --accent-red: #ff3131;
+    --accent-red-hover: #d12727;
+    --accent-red-glow: rgba(255, 49, 49, 0.4);
     
-    /* Sombra Neumórfica (Para tarjetas y elementos) */
-    --neumorphic-shadow: -5px -5px 10px rgba(255, 255, 255, 0.01), 
-                         5px 5px 15px rgba(0, 0, 0, 0.3);
-    --neumorphic-shadow-inset: inset -2px -2px 5px rgba(255, 255, 255, 0.02),
-                              inset 2px 2px 8px rgba(0, 0, 0, 0.2);
+    /* Sombras Neumórficas Mejoradas */
+    --neumorphic-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -4px -4px 12px rgba(255, 255, 255, 0.02);
+    --neumorphic-shadow-inset: inset 4px 4px 8px rgba(0, 0, 0, 0.4), inset -2px -2px 6px rgba(255, 255, 255, 0.01);
 
-    /* Estilo General */
-    --border-radius-large: 20px;
-    --border-radius-med: 12px;
+    --border-radius-large: 24px;
+    --border-radius-med: 16px;
     --border-radius-round: 50px;
     
-    --transition-fast: 0.2s ease;
+    --transition-fast: 0.3s ease;
 }
