@@ -1,25 +1,23 @@
 :root {
-    /* Fondo más oscuro para que resalte el rojo */
-    --bg-dark-900: #050505; 
-    --bg-dark-800: #0c0c0c;
-    --bg-dark-700: #141414; 
+    --bg-page: #050505;
+    --bg-card: #0b0b0b;
+    --bg-element: #111111;
     
-    --text-white: #ffffff;
-    --text-gray-300: #b0b0b0;
-    --text-gray-500: #606060;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --text-muted: #555555;
     
-    /* Rojo Vibrante de la imagen */
-    --accent-red: #ff3131;
-    --accent-red-hover: #d12727;
-    --accent-red-glow: rgba(255, 49, 49, 0.4);
+    --red-vibrant: #ff2a2a;
+    --red-glow: rgba(255, 42, 42, 0.35);
+    --red-muted: rgba(255, 42, 42, 0.05);
     
-    /* Sombras Neumórficas Mejoradas */
-    --neumorphic-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -4px -4px 12px rgba(255, 255, 255, 0.02);
-    --neumorphic-shadow-inset: inset 4px 4px 8px rgba(0, 0, 0, 0.4), inset -2px -2px 6px rgba(255, 255, 255, 0.01);
+    --shadow-card-outer: 0 10px 40px rgba(0, 0, 0, 0.7);
+    --shadow-neumorphic-out: -6px -6px 16px rgba(255, 255, 255, 0.012), 6px 6px 20px rgba(0, 0, 0, 0.5);
+    --shadow-neumorphic-in: inset -2px -2px 8px rgba(255, 255, 255, 0.01), inset 2px 2px 10px rgba(0, 0, 0, 0.4);
 
-    --border-radius-large: 24px;
-    --border-radius-med: 16px;
-    --border-radius-round: 50px;
-    
-    --transition-fast: 0.3s ease;
+    --border-glass: 1px solid rgba(255, 255, 255, 0.03);
+    --radius-large: 24px;
+    --radius-med: 16px;
+    --radius-round: 100px;
+    --transition: 0.3s ease-in-out;
 }
