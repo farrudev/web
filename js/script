@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav ul");
   const links = [...document.querySelectorAll("nav a")];
